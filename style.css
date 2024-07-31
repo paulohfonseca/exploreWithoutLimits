@@ -1,0 +1,239 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+
+    --linear-color1: #343193;
+    --linear-color2: #302C63;
+    --color-white: #ffffff;
+    --color-title: #B52184; 
+    --color-text: #312D64;
+}
+
+body, input, textarea, button {
+    font-family: "Mulish", sans-serif;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-bottom: 9.3rem;
+    padding: 0 3.2rem;
+}
+
+h1 {
+    font-size: 3.2rem;
+    color: var(--color-title);
+
+    margin: 1.7rem 0 0.5rem;
+}
+
+/* formatar o p que tem anteriormente o h1 */
+h1 + p {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--color-text);
+
+    margin-bottom: 3.5rem;
+}
+
+.wallpaper {
+    text-align: center;
+}
+
+section.contentCards {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    padding: 5.5rem 4rem;
+
+    background-image: linear-gradient(to right, var(--linear-color1), var(--linear-color2));
+}
+
+.card {
+    max-width: 35.2rem;
+    padding: 2.6rem;
+
+    border-radius: 2rem;
+    background-color: var(--color-white);
+}
+
+.card h2 {
+    font-size: 3rem;
+    color: var(--color-title);
+    margin: 3.3rem 0 2rem;
+}
+
+.card p {
+    font-size: 1.6rem;
+    color: var(--color-text);
+}
+
+section.contact form {
+    max-width: 35.2rem;
+    margin: 7.8rem 4rem 6.5rem;
+}
+
+form fieldset {
+    border: none;
+}
+
+form legend {
+    font-size: 3.2rem;
+    font-weight: 700;
+    color: var(--color-title);
+
+    margin-bottom: 4.3rem;
+}
+
+div.input-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+
+    position: relative;
+}
+
+.input-wrapper label {
+    visibility: hidden;
+}
+
+.input-wrapper img {
+    position: absolute;
+    top: 4.9rem;
+    left: 1rem;
+}
+
+.input-wrapper input {
+    height: 4.8rem;
+   
+    padding: 1.4rem 4rem;
+}
+
+.input-wrapper textarea {
+    height: 12.6rem;
+
+    padding: 1.2rem 1.6rem;
+}
+
+.input-wrapper input, 
+.input-wrapper textarea {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--color-text);
+
+    border-radius: 1.6rem;
+    border: 1px solid var(--color-text);
+}
+
+form button {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--color-white);
+
+    background-image: linear-gradient(to right, var(--linear-color1), var(--linear-color2));
+
+    margin-top: 2.4rem;
+    padding: 1.05rem 1.6rem;
+
+    border-radius: 1.6rem;
+    border: none;
+}
+
+.stars {
+    display: none;
+}
+
+
+footer {
+    text-align: center;
+    padding: 3.2rem 1.6rem;
+
+    background-image: linear-gradient(to right, var(--linear-color1), var(--linear-color2));
+}
+
+footer p {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--color-white);
+}
+
+
+/* Responsive ============= */
+@media (min-width: 768px) {
+    header {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+        align-items: center;
+        
+        max-width: 128rem;
+        margin-bottom: 17rem;
+    }
+
+    header .wallpaper {
+        text-align: left;
+        max-width: 54rem;
+        height: 20rem;
+    }
+
+    header .wallpaper h1 {
+        font-size: 4rem;
+        margin: 0rem 0 0.8rem;
+    }
+
+    .wallpaper h1 + p {
+        font-size: 2.6rem;
+        margin-bottom: 8rem;
+    }
+
+    section.contentCards {
+        display: flex;
+        flex-direction: row;
+        gap: 6rem;
+        padding: 6.4rem 11.1rem;
+    }
+
+    section.contact {
+        display: flex;
+        justify-content: space-between;
+        padding-left: 10rem;
+    }
+
+    section form {
+        width: 59.5rem;
+        margin: 9.5rem 0rem;
+    }
+
+    div.input-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 2.4rem;
+    }
+    
+    .stars {
+        display: block;
+    }
+}
+
+@media (min-width: 1024px) {
+    header > img {
+        max-width: 71.9rem;
+        max-height: 73rem;
+    }
+
+    header .wallpaper h1 {
+        font-size: 5rem;
+    }
+
+    .wallpaper h1 + p {
+        font-size: 3.2rem;
+        margin-bottom: 8rem;
+    }
+}
