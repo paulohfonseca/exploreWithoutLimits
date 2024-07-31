@@ -64,6 +64,14 @@ section.contentCards {
     background-color: var(--color-white);
 }
 
+.card img,
+.card h2,
+.card p {
+    animation: text 1s backwards;
+    animation-delay: 2s;
+
+}
+
 .card h2 {
     font-size: 3rem;
     color: var(--color-title);
@@ -163,6 +171,19 @@ footer p {
     font-weight: 600;
     color: var(--color-white);
 }
+
+/* Animation ================= */
+@keyframes text {
+    0% {
+        transform: translateX(100vw);
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
 
 
 /* Responsive ============= */
